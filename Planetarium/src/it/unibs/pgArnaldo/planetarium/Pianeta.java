@@ -9,8 +9,6 @@ public class Pianeta extends CorpoCeleste{
 	}
 	public void aggiungiLuna(Luna luna) {
 		lista_lune.add(luna);
-		//nel metodo aggiungi luna del sistema stellare richiamo anche questo
-		//in modo da modificare sia la lista del sistema che quella del singolo pianeta
 	}
 	public Luna getLuna(int i) {
 		return lista_lune.get(i);
@@ -24,6 +22,9 @@ public class Pianeta extends CorpoCeleste{
 		descrizione.append("\nSistema Stellare  = " + sistema);
 		descrizione.append("\nMassa = " + massa);
 		descrizione.append("\nPosizione = ( " + posizione[0] + ", " + posizione[1]);
+		descrizione.append("\nLune che orbitano intorno:");
+		for (int i = 0; i < lista_lune.size(); i++)
+			descrizione.append("\n" + lista_lune.get(i).getNome());
 		return descrizione;
 	}
 	public String getNome() {

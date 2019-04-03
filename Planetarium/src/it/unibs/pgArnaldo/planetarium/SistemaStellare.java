@@ -27,34 +27,34 @@ public class SistemaStellare {
 
 	public void rimuoviPianeta(Pianeta pianeta) {
 		if(lista_pianeti.remove(pianeta))
-			System.out.print("Il pianeta " + pianeta.getNome() + " e' stato rimosso con successo dal Sistema Stellare");
+			System.out.println("Il pianeta " + pianeta.getNome() + " e' stato rimosso con successo dal Sistema Stellare");
 		else
-			System.out.print("Rimozione del pianeta fallita");
+			System.out.println("Rimozione del pianeta fallita");
 	}
 	
 
 	public void rimuoviLuna(Luna luna) {
 		if(lista_lune.remove(luna))
-			System.out.print("La luna " + luna.getNome() + " e' stata rimossa con successo dal Sistema Stellare");
+			System.out.println("La luna " + luna.getNome() + " e' stata rimossa con successo dal Sistema Stellare");
 		else
-			System.out.print("Rimozione della luna fallita");
+			System.out.println("Rimozione della luna fallita");
 
 	}
 
 	public void ricercaPianeta(Pianeta pianeta) {
 		if(lista_pianeti.contains(pianeta))
-			System.out.print("Il pianeta " + pianeta.getNome() + " appartiene al Sistema Stellare");
+			System.out.println("Il pianeta " + pianeta.getNome() + " appartiene al Sistema Stellare");
 		else
-			System.out.print("Il codice inserito non corrisponde a nessun pianeta del Sistema Stellare");
+			System.out.println("Il codice inserito non corrisponde a nessun pianeta del Sistema Stellare");
 	}
 
 	public void ricercaLuna(Luna luna) {
 		if(lista_lune.contains(luna)) {
 			System.out.print("La luna " + luna.getNome() + " appartiene al Sistema Stellare. ");
-			System.out.print("Gira attorno al pianeta: " + luna.getPianeta().getNome());
+			System.out.println("Gira attorno al pianeta: " + luna.getPianeta().getNome());
 		}
 		else
-			System.out.print("Il codice inserito non corrisponde a nessuna luna del Sistema Stellare");
+			System.out.println("Il codice inserito non corrisponde a nessuna luna del Sistema Stellare");
 	}
 
 	public double CalcolaCMX() {

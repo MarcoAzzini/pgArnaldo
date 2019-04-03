@@ -11,13 +11,13 @@ public class Luna extends CorpoCeleste {
 	public Pianeta getPianeta() {
 		return pianeta;
 	}
-	public StringBuffer toStrinng() {
+	public String toString() {
 		StringBuffer descrizione = new StringBuffer();
 		descrizione.append("Nome = " + nome);
 		descrizione.append("\nPercorso = " + sistema.getNome());
 		descrizione.append(" --> " + pianeta.getNome());
 		descrizione.append(" --> " + nome);
-		return descrizione;
+		return descrizione.toString();
 	}
 	public String getNome() {
 		return nome;
